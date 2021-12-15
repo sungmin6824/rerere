@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피어나</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body id="intro_page">
+    <div class="flex-container">
+        <!-- <div class="spinner"><p>
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+            Loading...
+            </p>
+        </div> -->
+        <div class="flex-slide home"><a href="./pink.html">
+            <div class="flex-title flex-title-home">RED</div>
+            <div class="flex-about flex-about-home"><p>Red is the most intense color that gives confidence and stimulates passion.</p></div></a>
+        </div>
+        <div class="flex-slide about"><a href="./yellow.html">
+            <div class="flex-title">YELLOW</div>
+            <div class="flex-about"><p>Warm shades in this color represent the assurance for a bright and positive future.</p></div></a>
+        </div>
+        <div class="flex-slide work"><a href="./blue.html">
+            <div class="flex-title">BLUE</div>
+            <div class="flex-about"><p>Blue means freedom and hope and gives a pleasant and refreshing atmosphere.</p></div></a>
+        </div>
+        <div class="flex-slide contact"><a href="./purple.html">
+            <div class="flex-title">VIOLET</div>
+            <div class="flex-about"><p>This color is perfect and ideal and stimulates dreams and intellectual creativity.</p></div></a>
+        </div>
+    </div>
+    <script>
+        (function(){
+	// $('.flex-container').waitForImages(function() {
+	// 	$('.spinner').fadeOut();
+	// }, $.noop, true);
+	
+            $(".flex-slide").each(function(){
+                $(this).hover(function(){
+                    $(this).find('.flex-title').css({
+                        transform: 'rotate(0deg)',
+                        top: '50%'
+                    });
+                    $(this).find('.flex-about').css({
+                        opacity: '1'
+                    });
+                }, function(){
+                    $(this).find('.flex-title').css({
+                        transform: 'rotate(90deg)',
+                        top: '50%'
+                    });
+                    $(this).find('.flex-about').css({
+                        opacity: '0'
+                    });
+                })
+            });
+
+        //     $('.flex-slide').click(function(){
+        //     $('#box').css('background-color', '#BE96FF');
+        // })
+    })();
+    </script>
+</body>
+</html>

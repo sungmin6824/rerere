@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuffle</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        *{
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body{
+            background-color: #0d0d0d;
+        }
+            
+        header{
+            width: 100vw;
+            height: 80px;
+            /* min-height: 30px; */
+        }
+        .logo > a{
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 32px;
+            color: #fff;
+        }
+
+        header nav{
+            position: absolute;
+            top:0;
+            /* margin-left: calc((100vw - 1440px) / 2); */
+            height: 80px;
+            width: 100%;
+            /*	background-color: red;*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+
+            position: fixed;
+            background-color: #0d0d0d;
+        }
+
+        header nav h1{
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            color: white;
+            margin-left: 120px;
+        }
+
+        header nav ul{
+            display: flex;
+            list-style: none;
+            gap: 68px;
+            margin-right: 120px;
+        }
+
+        header nav a{
+            font-size: 16px;
+            letter-spacing: -1px;
+            text-decoration: none;
+            color: #A0A0A0;
+
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header nav a:hover{
+            color: #fff;
+
+        }
+
+        .first{
+            color: #fff;
+        }
+
+        .major a{
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            float: right;
+            margin-top: 96px;
+            margin-right: 80px;
+
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .products{
+            width: 1280px;
+            margin: auto;
+        }
+
+        .rotate{
+            width: 20px; 
+            margin-right: 12px;
+        }
+
+        .button{
+         text-decoration: none;
+         display: block;
+         align-items: center;
+        }
+
+        #ho{
+          overflow:hidden;
+        }
+
+        #ho:hover img{
+          transform:scale(1.2); 
+          transition: all 0.7s ease-in-out; 
+        }
+
+        .products h1 {
+        	color: #fff;
+        	font-size: 20px;
+        	font-weight: bold;
+        	margin-bottom: 60px;
+        	margin-top: 120px;
+        	text-align: center;
+          text-decoration: none;
+        }
+
+        .product-list {
+        	width: 1240px;
+        	margin-left: auto; 
+        	margin-right: auto;
+        }
+
+        .product {
+        	text-align: center;
+        	display: block;
+        	color: #545454;
+        	text-decoration: none;
+        	float: left;
+        	margin-left: 10px;
+        	margin-right: 10px;
+        }
+
+        .product-name {
+        	margin-top: 20px;
+        	margin-bottom: 4px;
+          color: #fff;
+          font-size: 16px;
+
+          font-family: 'Roboto', sans-serif;
+        }
+
+        .product-student {
+        	margin-bottom: 80px;
+          margin-top: 8px;
+          color: #fff;
+          font-family: 'Nanum Myeongjo', serif;
+          font-size: 13px;
+
+          font-family: 'Roboto', sans-serif;
+        }
+
+        .clearfix {
+        	clear: both;
+        }
+        footer{
+          height: 100px;
+          width: 100vw;
+          display: flex;
+          margin: 0;
+        }
+        .footerLeft {
+          width:25%;
+          background-color: #0d0d0d;
+          border-right: 0.8px solid #fff;
+        }
+        .footerLeft > p {
+          font-family: 'Playfair Display', serif;
+          font-size: 24px;
+          font-weight: 400;
+          color: white;
+          text-align:center;
+          padding-top:35px;
+          border-top: 0.8px solid white;
+        }
+
+        .footerCenter {
+          width: 40%;
+          background-color: #0d0d0d;
+        }
+        .footerCenter > p {
+          font-family: 'Playfair Display', serif;
+          font-size: 16px;
+          font-weight: 400;
+          color: white;
+          line-height: 138%;
+          letter-spacing: 10%;
+          padding-top: 30px;
+          padding-left: 36px;
+          border-top: 0.8px solid white;
+        }
+        .footerRight {
+            width: 35%;
+            background-color: white;
+            padding-top: 40px;
+            padding-right: 30px;
+            text-align: right;
+            box-sizing: border-box;
+        }
+        .footerRight > img{
+          width: 62.05px;
+          height: 26.15px;
+          padding-right: 8px;
+        }
+        .footerRight > h6 {
+          float: right;
+        }
+        .footerRight > h6 > .min{
+          font-size: 9px;
+        }
+        .footerRight > h6 p{
+          font-size: 14px;
+        }
+        .footerRight > h6:first-child {
+          font-size: 9px;
+        }
+        .footerRight > p {
+          font-family: 'Roboto', sans-serif;
+          font-size: 8px;
+          font-weight: 300;
+          color: #1F1F1F;
+          text-align:right;
+          padding-top: 8px;
+        }
+
+        
+        </style>
+</head>
+<body>
+
+    <header>
+		
+		<nav>
+      <h1 class="logo"><a href="./main.html" id="logoM">PIONAR</a></h1>
+			<ul class="navigation">
+				<li><a class="second" href="./profile.html">PROFILE</a></li>
+				<li><a class="first" href="./works.html">WORKS</a></li>
+				<li><a class="second" href="http://2021.kpudesign.net/index">ARCHIVE</a></li>
+				<li><a class="second" href="./about.html">ABOUT</a></li>
+			</ul>
+		</nav>
+	</header>
+    
+    <!-- <a href="#">MEDIA DESIGN</a> <a href="#">INDUSTRIAL DESIGN</a> -->
+    
+    <div class="products">
+            <div class="major"><a href="./works_sub.html">MEDIA DESIGN</a>&nbsp;<a href="#">INDUSTRIAL DESIGN</a></div>
+        <a class="button" href="./works.html"><h1><img class="rotate" src="image/rotate.png">Shuffle</h1></a>
+        <div class="product-list">
+
+        <a href="./works_sub.html" class="product">
+          <div id="ho"><img src="image/03.jpg" width="280" height="280"></div>
+          <div class="product-name">Driving Mate</div>
+          <div class="product-student">김하림 이승은</div>
+        </a>
+
+        <a href="./works_sub.html" class="product">
+          <div id="ho"><img src="image/01.png" width="280" height="280"></div>
+          <div class="product-name">MOMeMOM</div>
+          <div class="product-student">서정민 이현나 조민기</div>
+        </a>
+
+        <a href="./works_sub.html" class="product">
+          <div id="ho"><img src="image/04.png" width="280" height="280"></div>
+          <div class="product-name">SECURY</div>
+          <div class="product-student">한지우 김민지</div>
+        </a>
+
+        <a href="./works_sub.html" class="product">
+          <div id="ho"><img src="image/07.png" width="280" height="280"></div>
+          <div class="product-name">Driving Mate</div>
+          <div class="product-student">김하림 이승은</div>
+        </a>
+
+        <a href="./works_sub.html" class="product">
+          <div id="ho"><img src="image/05.jpg" width="280" height="280"></div>
+          <div class="product-name">MOMeMOM</div>
+          <div class="product-student">서정민 이현나 조민기</div>
+        </a>
+
+        <a href="./works_sub.html" class="product/">
+          <div id="ho"><img src="image/02.png" width="280" height="280"></div>
+          <div class="product-name">dot-Book</div>
+          <div class="product-student">홍수정 김아정 이효정</div>
+        </a>
+
+        <a href="./works_sub.html" class="product/">
+          <div id="ho"><img src="image/06.png" width="280" height="280"></div>
+          <div class="product-name">dot-Book</div>
+          <div class="product-student">홍수정 김아정 이효정</div>
+        </a>
+        
+        <a href="./works_sub.html" class="product/">
+          <div id="ho"><img src="image/08.png" width="280" height="280"></div>
+          <div class="product-name">SECURY</div>
+          <div class="product-student">한지우 김민지</div>
+        </a>
+
+        <a href="./works_sub.html" class="product/">
+          <div id="ho"><img src="image/02.png" width="280" height="280"></div>
+          <div class="product-name">dot-Book</div>
+          <div class="product-student">홍수정 김아정 이효정</div>
+        </a>
+
+        <a href="./works_sub.html" class="product">
+          <div id="ho"><img src="image/01.png" width="280" height="280"></div>
+          <div class="product-name">MOMeMOM</div>
+          <div class="product-student">서정민 이현나 조민기</div>
+        </a>
+
+        <a href="./works_sub.html" class="product">
+          <div id="ho"><img src="image/03.jpg" width="280" height="280"></div>
+          <div class="product-name">Driving Mate</div>
+          <div class="product-student">김하림 이승은</div>
+        </a>
+
+        <a href="./works_sub.html" class="product">
+          <div id="ho"><img src="image/05.jpg" width="280" height="280"></div>
+          <div class="product-name">MOMeMOM</div>
+          <div class="product-student">서정민 이현나 조민기</div>
+        </a>
+
+        <a href="./works_sub.html" class="product">
+          <div id="ho"><img src="image/08.png" width="280" height="280"></div>
+          <div class="product-name">SECURY</div>
+          <div class="product-student">한지우 김민지</div>
+        </a>
+
+        <a href="./works_sub.html" class="product/">
+          <div id="ho"><img src="image/06.png" width="280" height="280"></div>
+          <div class="product-name">dot-Book</div>
+          <div class="product-student">홍수정 김아정 이효정</div>
+        </a>
+
+        <a href="./works_sub.html" class="product/">
+          <div id="ho"><img src="image/04.png" width="280" height="280"></div>
+          <div class="product-name">SECURY</div>
+          <div class="product-student">한지우 김민지</div>
+        </a>
+
+        <a href="./works_sub.html" class="product">
+          <div id="ho"><img src="image/07.png" width="280" height="280"></div>
+          <div class="product-name">Driving Mate</div>
+          <div class="product-student">김하림 이승은</div>
+        </a>
+
+        <div class="clearfix">
+        </div>	
+	  </div>
+  
+  <!-- <footer>
+    <div class="footerLeft"><p>PIONAR</p></div>
+    <div class="footerCenter"><p>FLOWER THAT BLOOMS IN ADVERSITY<br>IS THE MOST RARE AND BEAUTY OF ALL</p></div>
+    <div class="footerRight">
+      <img src="./imgs/KPU.png" alt="kpu">
+      <h6>
+        <p class="min">기업을 품는 산학융합 선도대학</p>
+        <p>한국산업기술대학교</p>
+      </h6>
+      <p>COPYRIGHT © 2021 KOREA POLYTECHNIC UNIV, ALL RIGHTS RESERVED</p>
+    </div>
+  </footer> -->
+</body>
+</html>
+</html>

@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>works</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+	
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.min.js"></script>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');	
+
+	*{
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	
+	
+} 
+
+canvas{
+	/* width: 1280px;
+	height: 800px; */
+	
+	
+	position: absolute;
+	top: 2930px;
+	z-index: -1;
+	left: 0;
+}
+
+#three{
+	overflow: hidden;
+}
+body{
+
+-ms-overflow-style: none; 
+background-color: #F3F3F3;
+} 
+
+::-webkit-scrollbar { 
+
+display: none; 
+
+}
+/* .container{
+	display: none;
+	-ms-overflow-style: none;
+}		
+
+.container::-webkit-scrollbar{
+	display: none;
+} */
+header{
+	width: 100vw;
+	height: 80px;
+	/* min-height: 30px; */
+	position: fixed;
+	
+
+	
+}
+.logo > a{
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 32px;
+            color: #fff;
+        }
+header nav{
+
+position: absolute;
+top:0;
+/* margin-left: calc((100vw - 1440px) / 2); */
+height: 80px;
+width: 100%;
+/*	background-color: red;*/
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 10;
+
+position: fixed;
+background-color: #0d0d0d;
+
+}
+header nav h1{
+font-size: 18px;
+font-weight: bold;
+letter-spacing: -1px;
+color: #fff;
+margin-left: 120px;
+}
+
+header nav ul{
+display: flex;
+list-style: none;
+gap: 68px;
+margin-right: 120px;
+}
+header nav a{
+font-size: 16px;
+letter-spacing: -1px;
+text-decoration: none;
+color: rgb(194, 194, 194);
+font-weight: 400;
+}
+#present{
+    color: #fff;
+}
+.navigation li:hover a{
+    color: #fff;
+}
+
+
+#main{
+	width: 100%;
+}
+
+.container{
+	width: 1280px;
+	margin: 1em auto;
+	
+}
+
+.workt{
+	display: flex;
+	
+}
+.workt h1{
+	font-size: 50px;
+	margin-right: 140px;
+	
+}
+
+.workt p{
+	font-size: 26px;
+}
+
+.workt h2{
+	width: 840px;
+	font-size: 16px;
+	text-align: justify;
+	font-weight: 400;
+	margin-top: 10px;
+	line-height: 200%;
+}
+
+#back{
+	width: 1280px;
+	height: 954px;
+	background-color: #EDE8E8;
+	position: absolute;
+	top: 966px;
+	z-index: -1;
+	
+}
+
+/* #first{
+	margin-top: 64px;
+	margin-left: 110px;
+	width: 510px;
+	height: 826px;
+	overflow:hidden;
+	
+} */
+
+.subt h3{
+	font-size: 28px;
+}
+
+
+
+#second{
+	position: absolute;
+	top: 64px;
+	right: 110px;
+	overflow:hidden;
+}
+
+#third{
+	position: absolute;
+	right: 110px;
+	top: 497px;
+	overflow:hidden;
+}
+.subt{
+	position: absolute;
+	top: 1980px;
+	
+}
+
+h4{
+	width:1280px;
+	text-align: justify;
+	line-height: 200%;
+	font-weight: 400;
+	margin-top: 20px;
+	font-size: 16px;
+}
+
+#sketch{
+	width: 618px;
+	position: absolute;
+	top: 2189px;
+	z-index: -1;
+}
+h5{
+	font-size: 28px;
+}
+h6{
+	width: 620px;
+	font-size: 16px;
+	line-height: 200% ;
+	font-weight: 400;
+	text-align: justify;
+	margin-top: 20px;
+	
+}
+
+.ssub{
+	position: absolute;
+	right: 130px;
+	top:2563px;
+}
+
+.custom{
+	width: 1100px;
+	height: 777px;
+	background-color: #F8F8F8;
+	position: absolute;
+	top: 3910px;
+	z-index: -1;
+}
+
+#one{
+	position: absolute;
+}
+
+#two{
+	position: absolute;
+}
+
+#tt{
+	position: absolute;
+}
+
+#threa{
+	position: absolute;
+}
+
+#four{
+	position: absolute;
+}
+
+#five{
+	position: absolute;
+}
+.custom2{
+	width: 180px;
+	height: 777px;
+	background-color: white;
+	top: 3910px;
+	position: absolute;
+	left: 1220px;
+	z-index: -1;
+
+}
+.custom2 a{
+	position: absolute;
+	color: #898989;
+	font-size: 24px;
+	font-weight: 600;
+	top: 36px;
+	left: 60px;
+
+}
+
+.custom2 p{
+	position: absolute;
+	color: #898989;
+	font-size:16px;
+	font-weight: 400;
+	top: 36px;
+	left: 60px;
+
+}
+
+#red{
+	position: absolute;
+	top: 112px;
+	left: 48px;
+}
+#first:hover img{
+		transform:scale(1.1); 
+		transition: all 0.7s ease-in-out; 
+	}
+
+#second:hover img {
+		transform:scale(1.1); 
+		transition: all 0.7s ease-in-out; 
+	}
+
+#third:hover img {
+		transform:scale(1.1); 
+		transition: all 0.7s ease-in-out; 
+	}
+
+
+#red:hover{
+	filter: drop-shadow(3px 3px 3px rgb(139, 139, 139));
+	
+}
+
+#orange{
+	position: absolute;
+	top: 241px;
+	left: 48px;
+}
+
+#orange:hover{
+	filter: drop-shadow(3px 3px 3px rgb(139, 139, 139));
+}
+
+#yellow{
+	position: absolute;
+	top: 370px;
+	left: 48px;
+}
+#yellow:hover{
+	filter: drop-shadow(3px 3px 3px rgb(139, 139, 139));
+}
+
+#blue{
+	position: absolute;
+	top: 499px;
+	left: 48px;
+}
+
+#blue:hover{
+	filter: drop-shadow(3px 3px 3px rgb(139, 139, 139));
+}
+
+#black{
+	position: absolute;
+	top: 628px;
+	left: 48px;
+}
+
+#black:hover{
+	filter: drop-shadow(3px 3px 3px rgb(139, 139, 139));
+}
+
+span{
+	position: absolute;
+	top: 4711px;
+	left: 270px;
+	color: #898989;
+	font-size:16px;
+	font-weight: 400;
+	z-index: -1;
+}
+
+footer img{
+	width: 100%;
+	height: 128px;
+	position: absolute;
+	top:6229px;
+}
+.profile{
+	position: absolute;
+	top: 4927px;
+	z-index: -1;
+
+	
+}
+.profile p{
+	width: 1280px;
+	border-bottom: 1px solid #b1b1b1;
+	padding-bottom: 16px;
+	margin-bottom: 60px;
+	font-size: 28px;
+	padding-left: 110px;
+}
+
+.profile a{
+	position: absolute;
+	font-size: 28px;
+	font-weight:400;
+	top: 100px;
+	margin-left: 17px;
+	width: 603px;
+	border-bottom: 1px solid #b1b1b1;
+	padding-bottom: 10px;
+}
+#photo{
+	width: 290px;
+	height: 360px;
+	overflow: hidden;
+	margin-left: 110px;
+}
+
+.bio{
+	display: flex;
+	position: absolute;
+	left: 418px;
+	top: 155px;
+	font-weight: 400;
+}
+
+.bio h1{
+	font-size: 20px;
+	color: #898989;
+}
+
+.bio h2{
+	width: 379px;
+	line-height: 200%;
+	font-size: 16px;
+	color: #898989;
+	font-weight: 400;
+	margin-left: 121px;
+}
+.contri{
+	display: flex;
+	position: absolute;
+	left: 418px;
+	top: 266px;
+	width: 603px;
+	border-top: 1px dashed #b1b1b1;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-weight: 400;
+}
+
+.contri h1{
+	font-size: 20px;
+	color: #898989;
+}
+
+.contri h2{
+	width: 379px;
+	line-height: 200%;
+	font-size: 16px;
+	color: #898989;
+	font-weight: 400;
+	margin-left: 30px;
+}
+
+.contact{
+	display: flex;
+	position: absolute;
+	left: 418px;
+	top: 355px;
+	width: 603px;
+	border-top: 1px dashed #b1b1b1;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-weight: 400;
+	border-bottom: 1px dashed #b1b1b1;
+}
+
+.contact h1{
+	font-size: 20px;
+	color: #898989;
+}
+
+.contact h2{
+	width: 379px;
+	line-height: 200%;
+	font-size: 16px;
+	color: #898989;
+	font-weight: 400;
+	margin-left:78px;
+	
+}
+
+.line{
+	width: 1280px;
+	border-bottom: 1px solid #b1b1b1;
+	padding-top: 65px;
+	
+}
+.download h1{
+	font-size: 16px;
+	line-height: 200%;
+	color: #898989;
+	text-align: justify;
+	width: 816px;
+}
+
+.download a{
+	position: absolute;
+width: 220px;
+height: 36px;
+left: 1080px;
+top: 3793.58px;
+text-decoration: none;
+color: white;
+font-weight: 400;
+text-align: center;
+line-height: 36px;
+background: #696969;
+border-radius: 46.5035px;
+}
+
+.download a:hover{
+border:1px solid gray;
+background-color: white;
+color: gray;
+}
+.download h1{
+	font-size: 16px;
+	width: 816.78px;
+	position: absolute;
+	top: 3793px;
+	left: 200px;
+	font-weight: 400;
+}
+.model{
+	
+	font-size: 28px;
+	position: absolute;
+width: 116px;
+height: 33px;
+font-weight: 600;
+
+top: 2867px;
+}
+
+
+/* footer{
+	height: 100px;
+	width: 100vw;
+	display: flex;
+}
+.footerLeft {
+	width:25%;
+	background-color: #0d0d0d;
+	border-right: 0.8px solid #fff;
+}
+.footerLeft > p {
+	font-family: 'Playfair Display', serif;
+	font-size: 24px;
+	font-weight: 400;
+	color: white;
+	text-align:center;
+	padding-top:35px;
+	border-top: 0.8px solid white;
+}
+
+.footerCenter {
+	width: 40%;
+	background-color: #0d0d0d;
+}
+.footerCenter > p {
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: white;
+	line-height: 138%;
+	letter-spacing: 10%;
+	padding-top: 30px;
+	padding-left: 36px;
+	border-top: 0.8px solid white;
+}
+.footerRight {
+            width: 35%;
+            background-color: white;
+            padding-top: 40px;
+            padding-right: 30px;
+            text-align: right;
+            box-sizing: border-box;
+        }
+.footerRight > img{
+	width: 62.05px;
+	height: 26.15px;
+	padding-right: 8px;
+}
+.footerRight > h6 {
+	float: right;
+}
+.footerRight > h6 > .min{
+	font-size: 9px;
+}
+.footerRight > h6 p{
+	font-size: 14px;
+}
+.footerRight > h6:first-child {
+	font-size: 9px;
+}
+.footerRight > p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 8px;
+	font-weight: 300;
+	color: #1F1F1F;
+	text-align:right;
+	padding-top: 8px;
+} */
+
+</style>
+
+</head>
+<body>
+	<header>
+		
+		<nav>
+			<h1 class="logo"><a href="./main.html" id="logoM">PIONAR</a></h1>
+			<ul class="navigation">
+				<li><a href="./profile.html">PROFILE</a></li>
+				<li><a href="./works.html" id="present">WORKS</a></li>
+				<li><a href="http://2021.kpudesign.net/index">ARCHIVE</a></li>
+				<li><a href="./about.html">ABOUT</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<img src = "https://i.postimg.cc/259WVNmD/Frame-275.png" id = "main">
+
+	<div class = "container">
+		<div class= "workt">
+		<h1>WORK TITLE<br>
+		<p>work subtitle</p></h1>
+		
+		<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+	</div>
+
+	<div id="back">
+		<!-- <div id="first"><img src="https://i.postimg.cc/LXcHWMtm/image-123.png" height="826px"></div> -->
+		<div id="second"><img src="https://i.postimg.cc/sgSHYKxq/Frame-277.png"></div>
+		<div id="third"><img src="https://i.postimg.cc/nVg6qXTs/Frame-276.png"></div>
+	</div>
+
+	<div class="subt">
+		<h3>Background & Research</h3>
+		<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+	</div>
+	
+	
+	
+	<img src="https://i.postimg.cc/7PSGyBfK/Frame-100.png" id ="sketch">
+
+	<div class="ssub">
+	<h5>Sketch</h5>
+	<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h6>
+	</div>
+
+	<div class="custom">
+		<img src ="https://i.postimg.cc/43dB3Wy9/4.png" id ="one">
+		<img src ="https://i.postimg.cc/GpVJmr6W/1.png" id ="two">
+		<img src ="https://i.postimg.cc/1tRwyLVD/g.png" id ="tt">
+		<img src ="https://i.postimg.cc/G3XKQMrS/ff.png" id ="threa">
+		<img src ="https://i.postimg.cc/mrvCGjHR/image.png" id ="four">
+		<img src ="https://i.postimg.cc/yYshdLr8/2.png" id ="five">
+	</div>
+
+	<div class="custom2">
+		<a>Color</a>
+		<img src="https://i.postimg.cc/s2gGd8Xt/Ellipse-11.png" id="red">
+		<img src="https://i.postimg.cc/qR9NKvLT/Ellipse-12.png" id="orange">
+		<img src="https://i.postimg.cc/wB8kYfkk/vv.png" id="yellow">
+		<img src="https://i.postimg.cc/3rv4T28J/Ellipse-13.png" id="blue">
+		<img src="https://i.postimg.cc/ZqnnDdsm/Ellipse-15.png" id="black">
+
+
+	</div>
+
+	<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Lorem.</span>
+
+	<div class="model">Modeling</div>
+	<canvas id='three'></canvas>
+
+	<div class="download">
+		<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Lorem.</h1>
+		<a href="./models/white.glb" download>File Download</a>
+		</div>
+	
+	<div class="profile">
+		<p>PROFILE</p>
+
+		<img src="https://i.postimg.cc/QM6McVv2/kimharim.jpg" id="photo">
+
+		<a>Name/Major</a>
+
+		<div class="bio">
+			<h1>Bio</h1>
+			<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Lorem.</h2>
+		</div>
+
+		<div class="contri">
+			<h1>Contribution</h1>
+			<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h2>
+		</div>
+
+		<div class="contact">
+			<h1>Contact</h1>
+			<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Lorem.</h2>
+		</div>
+
+		<div class="line"></div>
+	</div>
+
+	</div>
+
+</div>
+
+<!-- <footer>
+    <div class="footerLeft"><p>PIONAR</p></div>
+    <div class="footerCenter"><p>FLOWER THAT BLOOMS IN ADVERSITY<br>IS THE MOST RARE AND BEAUTY OF ALL</p></div>
+    <div class="footerRight">
+      <img src="./imgs/KPU.png" alt="kpu">
+      <h6>
+        <p class="min">기업을 품는 산학융합 선도대학</p>
+        <p>한국산업기술대학교</p>
+      </h6>
+      <p>COPYRIGHT © 2021 KOREA POLYTECHNIC UNIV, ALL RIGHTS RESERVED</p>
+    </div>
+  </footer> -->
+
+<script>
+	$("#one").hide();
+	$("#two").hide();
+	$("#threa").hide();
+	$("#tt").hide();
+	$("#five").hide();
+
+	$(document).ready(function(){
+
+		
+
+    $("#red").click(function(){
+        $("#one").fadeIn(1000);
+		$("#two").hide();
+		$("#threa").hide();
+		$("#tt").hide();
+		$("#five").hide();
+		$("#four").hide();
+
+		$("#red").css("opacity","100%");
+		$("#orange").css("opacity","20%");
+		$("#yellow").css("opacity","20%");
+		$("#blue").css("opacity","20%");
+		$("#black").css("opacity","20%");
+		
+        
+       
+    });
+
+	$("#orange").click(function(){
+        $("#one").hide();
+		$("#two").fadeIn(1000);
+		$("#threa").hide();
+		$("#tt").hide();
+		$("#five").hide();
+		$("#four").hide();
+
+		$("#red").css("opacity","20%");
+		$("#orange").css("opacity","100%");
+		$("#yellow").css("opacity","20%");
+		$("#blue").css("opacity","20%");
+		$("#black").css("opacity","20%");
+        
+       
+    });
+
+	$("#yellow").click(function(){
+        $("#one").hide();
+		$("#two").hide();
+		$("#threa").hide();
+		$("#tt").fadeIn(1000);
+		$("#five").hide();
+		$("#four").hide();
+
+		$("#red").css("opacity","20%");
+		$("#orange").css("opacity","20%");
+		$("#yellow").css("opacity","100%");
+		$("#blue").css("opacity","20%");
+		$("#black").css("opacity","20%");
+        
+       
+    });
+
+	$("#blue").click(function(){
+        $("#one").hide();
+		$("#two").hide();
+		$("#threa").fadeIn(1000);
+		$("#tt").hide();
+		$("#five").hide();
+		$("#four").hide();
+
+		$("#red").css("opacity","20%");
+		$("#orange").css("opacity","20%");
+		$("#yellow").css("opacity","20%");
+		$("#blue").css("opacity","100%");
+		$("#black").css("opacity","20%");
+        
+       
+    });
+
+	$("#black").click(function(){
+        $("#one").hide();
+		$("#two").hide();
+		$("#threa").hide();
+		$("#tt").hide();
+		$("#five").fadeIn(1000);
+		$("#four").hide();
+
+		$("#red").css("opacity","20%");
+		$("#orange").css("opacity","20%");
+		$("#blue").css("opacity","20%");
+		$("#black").css("opacity","100%");
+		$("#yellow").css("opacity","20%");
+        
+        
+       
+    });
+});
+</script>
+
+
+	 
+		<div style="width:510px;height: 826px;overflow: hidden; position: absolute; top:1030px; left:240px; z-index: -1;">
+			<img id="NZoomImg" data-NZoomscale="2" style="width: 100%;height: 100%;" src="https://i.postimg.cc/zf8LBPKj/Frame-274.png" alt="">
+		</div>
+
+		
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="src/Nzoom.min.js"></script>
+		<script type="text/javascript">
+
+	 </script>
+
+<script type='module'>
+	import * as THREE from './three.js-dev/build/three.module.js';
+	import * as dat from './three.js-dev/examples/jsm/libs/dat.gui.module.js';
+	import {OrbitControls} from './three.js-dev/examples/jsm/controls/OrbitControls.js';
+	import {OBJLoader} from './three.js-dev/examples/jsm/loaders/OBJLoader.js';
+	import {MTLLoader} from './three.js-dev/examples/jsm/loaders/MTLLoader.js';
+	import {GLTFLoader} from './three.js-dev/examples/jsm/loaders/GLTFLoader.js';
+
+	let threeCanvas = document.querySelector('#three');
+
+	let renderer = new THREE.WebGLRenderer( { canvas: threeCanvas, antialias: true } );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor( 0xc4c4c4 )
+	renderer.setAnimationLoop( animate );
+
+	let scene = new THREE.Scene();
+
+	let camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.01, 100 );
+	camera.position.set(4.85, 19.21, 131.17);
+	scene.add( camera );
+
+	
+	
+
+	let light = new THREE.DirectionalLight( 0xffffff, 1 );
+	light.position.set( 6, 6, 6 );
+	scene.add( light );
+
+	let light3 = new THREE.DirectionalLight( 0xffffff, 1 );
+	light.position.set( -2.5, -2, 5 );
+	scene.add( light3 );
+		
+	let lightHelper = new THREE.DirectionalLight(0xffffff, 1);
+	scene.add(lightHelper);
+	light.position.z = 5;
+	light.position.x = 5;
+	light.position.y = 5;
+
+	let light2 = new THREE.AmbientLight( 0xffffff, 0.3 );
+	scene.add( light2 );
+
+	let light4 = new THREE.PointLight( 0xffffff, 1, -20 );
+	light4.position.set(6.5, 15, 1.1);
+	scene.add( light4 );
+	
+	const helper = new THREE.PointLightHelper(light4);
+	scene.add( helper );
+   
+
+	let controls = new OrbitControls ( camera, renderer.domElement );
+	controls.target = new THREE.Vector3( 1.29, 15.79, -1.25 );
+  
+
+
+	renderer.toneMapping = THREE.ACESFilmicToneMapping;  
+	renderer.toneMappingExposure = 1.2; 
+
+	
+
+  
+
+
+
+
+
+
+
+
+
+let gltfLoader = new GLTFLoader();
+
+let gltf2Loader = new GLTFLoader();
+
+// let gltf3Loader = new GLTFLoader();
+
+
+
+
+
+
+
+let gltf3Loader = new GLTFLoader();
+
+
+let toFind = [];
+
+gltf3Loader.load('models/white.glb', function(gltf3){
+let frame = gltf3.scene;
+frame.name="frame";
+scene.add(frame);
+console.log(frame);
+frame.scale.set(500,500,500);
+frame.position.z=30;
+frame.position.y=-40;
+frame.position.x=-20;
+
+
+toFind.push( frame.getObjectByName("plane") )
+
+
+});
+
+	let mouse = new THREE.Vector2();
+	$(window).on('mousemove', function(event){
+		mouse.x = (event.clientX / window.innerWidth) * 2 - 1
+		mouse.y = - (event.clientY / window.innerHeight) * 2 + 1
+	});
+
+ 
+
+
+	$(window).resize(function(){
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth/window.innerHeight;
+		camera.updateProjectionMatrix();
+	});
+
+
+
+let gltf8Loader = new GLTFLoader();
+
+
+
+
+
+
+
+
+
+$(window).resize(function(){
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	camera.aspect = window.innerWidth/window.innerHeight;
+	camera.updateProjectionMatrix();
+});
+
+
+
+
+
+
+
+	function animate( time ){
+		renderer.render( scene, camera );
+		controls.update();
+
+		TWEEN.update( time );
+	}
+
+	function moveCamera(_x, _y, _z, _tx, _ty, _tz, _d){
+		let ca = new TWEEN.Tween({
+				x: camera.position.x,
+				y: camera.position.y,
+				z: camera.position.z,
+				tx: controls.target.x,
+				ty: controls.target.y,
+				tz: controls.target.z,
+			})
+			.to({
+				x: _x,
+				y: _y,
+				z: _z,
+				tx: _tx,
+				ty: _ty,
+				tz: _tz,
+			}, _d)
+			.easing(TWEEN.Easing.Quadratic.InOut)
+			.onUpdate(function(val){
+				camera.position.set( val.x, val.y, val.z );
+				controls.target = new THREE.Vector3( val.tx, val.ty, val.tz );
+			}) 
+			.start();
+	}
+
+
+	$('.desc').click(function(){
+		$(this).hide();
+	})
+
+</script>    
+</body>
+</html>

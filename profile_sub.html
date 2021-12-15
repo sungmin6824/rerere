@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>profile</title>
+
+	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"> -->
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+	
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; } */
+
+*{
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+} 
+body{
+
+-ms-overflow-style: none; 
+
+background-color: #0d0d0d;
+} 
+
+::-webkit-scrollbar { 
+
+display: none; 
+
+}
+		
+header{
+	width: 100vw;
+	height: 80px;
+	/* min-height: 30px; */
+	
+
+	
+}
+.logo > a{
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 32px;
+            color: #fff;
+        }
+header nav{
+
+position: absolute;
+top:0;
+/* margin-left: calc((100vw - 1440px) / 2); */
+height: 80px;
+width: 100%;
+/*	background-color: red;*/
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1;
+
+position: fixed;
+background-color: #0d0d0d;
+
+}
+header nav h1{
+font-size: 18px;
+font-weight: bold;
+letter-spacing: -1px;
+color: white;
+margin-left: 120px;
+}
+
+header nav ul{
+display: flex;
+list-style: none;
+gap: 68px;
+margin-right: 120px;
+}
+header nav a{
+font-size: 16px;
+letter-spacing: -1px;
+text-decoration: none;
+color: white;
+}
+
+#about{
+	position: absolute;
+	top: 790px;
+	left: 343px;
+}
+
+#about p{
+	width: 394px;
+	height: 288px;
+	position: absolute;
+	top:0;
+	left:444px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 32px;
+	text-align: justify;
+	color: white;
+
+}
+
+#about2{
+	position: absolute;
+
+left: 546px;
+top: 1293px;
+}
+
+#about2 p{
+	position: absolute;
+	width: 268px;
+	height: 160px;
+	position: absolute;
+	top:0;
+	left:444px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 32px;
+	text-align: justify;
+	color: white;
+}
+
+#about3{
+	position: absolute;
+	position: absolute;
+
+	left: 480px;
+	top: 1759px;
+
+
+}
+
+#about3 p{
+	position: absolute;
+	width: 268px;
+	height: 160px;
+	position: absolute;
+	top:215px;
+	left:444px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 32px;
+	text-align: justify;
+	color: white;
+}
+
+#about3 a{
+	position: absolute;
+	width: 268px;
+	height: 160px;
+	position: absolute;
+	top:0;
+	right:444px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 32px;
+	text-align: justify;
+	color: white;
+}
+
+
+#about4{
+	position: absolute;
+	position: absolute;
+
+	left: 360px;
+	top: 2316px;
+
+
+}
+#about4 p{
+	position: absolute;
+	width: 620px;
+	height: 191px;
+	top:0;
+	left:454px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 32px;
+	text-align: justify;
+	color: white;
+}
+
+.up-on-scroll {
+    transition: transform 1s, opacity 1s;
+}
+
+#image{
+	position: absolute;
+	left: 130px;
+	filter: drop-shadow(-5px 5px 5px rgb(139, 139, 139));
+}
+
+.main h1{
+	font-family: 'Playfair Display', serif;
+	color: white;
+	font-size: 133px;
+	position: absolute;
+	left: 567px;
+	top: 145px;
+	z-index: 1;
+}
+.main{
+	height:2800px;
+}
+.main h2{
+	font-family: 'Playfair Display', serif;
+	color: white;
+	font-size: 133px;
+	position: absolute;
+	left: 567px;
+	top: 283px;
+	z-index: 1;
+}
+
+.main p{
+	position: absolute;
+	width: 376px;
+	height: 51px;
+	left: 569px;
+	top: 479px;
+	color: white;
+	font-size: 14px;
+	line-height: 200%;
+	text-align: justify;
+	font-family: 'Playfair Display', serif;
+}
+#bio{
+	color: white;
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	margin-left: 120px;
+	
+	
+}
+
+
+.main a{
+	position: absolute;
+	font-weight: 400;
+}
+
+#flower{
+	position: absolute;
+	left: 806px;
+	/* z-index: -1; */
+	animation-name:fadeInAnimation;
+        animation-duration:  3s;
+        animation-iteration-count:infinite;
+       
+
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+         top:80px;
+      }
+      50% {
+         top:110px;
+       }
+       100% {
+         top:80px;
+       }
+    }
+
+	.main h3{
+		font-size: 14px;
+		position: absolute;
+		top: 173px;
+		right: 292px;
+		color: white;
+		font-family: 'Playfair Display', serif;
+		font-weight: 400;
+		opacity: 60%;
+	}
+	.text{
+		color: white;
+		
+		font-size: 14px;
+		position: absolute;
+		font-weight: 400;
+		
+	}
+	.text a{
+		text-decoration: none;
+		color: white;
+		
+	}
+	#t:hover{
+		text-decoration:underline;
+		
+		
+	}
+	#te:hover{
+		text-decoration:underline;
+		
+		
+	}
+	#tex:hover{
+		text-decoration:underline;
+		
+		
+	}
+	#t{
+		font-family: 'Playfair Display', serif;
+		position: absolute;
+		top: 412px;
+		left: 1352px;
+	}
+
+	#te{
+		font-family: 'Playfair Display', serif;
+		position: absolute;
+		top: 432px;
+		left: 1352px;
+	}
+
+	#tex{
+		font-family: 'Playfair Display', serif;
+		position: absolute;
+		top: 452px;
+		left: 1352px;
+	}
+
+	.main h4{
+		color: white;
+		position: absolute;
+		font-family: 'Playfair Display', serif;
+		font-weight: 400;
+		left: 952px;
+		font-size: 16px;
+		top:120px;
+		z-index: 2;
+	}
+
+	.write{
+		width: 652px;
+		height: 475px;
+		background-color: #0d0d0d;
+		position: absolute;
+		right: 0;
+		top: 104px;
+	}
+
+	/* #flower{
+		z-index: 1;
+	} */
+
+	#fflow1{
+		position: absolute;
+		top:315px;
+		width: 200px;
+		left: 521px;
+		z-index: 1;
+	}
+
+	#fflow4:hover{
+		opacity: 70%;
+	}
+
+	#fflow5:hover{
+		opacity: 70%;
+	}
+
+	#fflow6:hover{
+		opacity: 70%;
+	}
+
+	#fflow7:hover{
+		opacity: 70%;
+	}
+
+	#fflow8:hover{
+		opacity: 70%;
+	}
+
+	#fflow2{
+		position: absolute;
+		z-index: -1;
+		top: 395px;
+		width: 200px;
+		left:521px;
+		
+	}
+
+	#fflow3{
+		position: absolute;
+		z-index: -1;
+		top: 395px;
+		width: 200px;
+		left: 521px;
+
+	}
+
+	#fflow4{
+		position: absolute;
+		z-index: 1;
+		top: 100px;
+		width: 200px;
+		
+
+	}
+
+	#fflow5{
+		position: absolute;
+		z-index: 1;
+		top: 300px;
+		width: 200px;
+		left: 900px;
+		
+
+	}
+
+	#fflow6{
+		position: absolute;
+		z-index: 1;
+		top: 300px;
+		width: 200px;
+		left: 1000px;
+		
+
+	}
+	#fflow7{
+		position: absolute;
+		z-index: 1;
+		top: 200px;
+		width: 200px;
+		left: 1000px;
+		
+
+	}
+	#fflow8{
+		position: absolute;
+		z-index: 1;
+		top: 250px;
+		width: 200px;
+		left: 1100px;
+		
+
+	}
+	.inp{
+		z-index: 2;
+	}
+
+	#fflow8:hover .box{
+		opacity: 1;
+	}
+	.box{
+		width: 100px;
+		height: 100px;
+		background-color: white;
+		position: absolute;
+		opacity: 0;
+	}
+
+	.fa-times{
+		color: white;
+		position: absolute;
+		top:124px;
+		left: 1242px;
+		z-index: 2;
+
+	}
+
+	.fa-times:hover{
+		color: purple;
+	}
+
+	footer{
+	height: 100px;
+	width: 100vw;
+	display: flex;
+}
+.footerLeft {
+	width:25%;
+	background-color: #0d0d0d;
+	border-right: 0.8px solid #fff;
+}
+.footerLeft > p {
+	font-family: 'Playfair Display', serif;
+	font-size: 24px;
+	font-weight: 400;
+	color: white;
+	text-align:center;
+	padding-top:35px;
+	border-top: 0.8px solid white;
+}
+
+.footerCenter {
+	width: 40%;
+	background-color: #0d0d0d;
+}
+.footerCenter > p {
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: white;
+	line-height: 138%;
+	letter-spacing: 10%;
+	padding-top: 30px;
+	padding-left: 36px;
+	border-top: 0.8px solid white;
+}
+.footerRight {
+            width: 35%;
+            background-color: white;
+            padding-top: 40px;
+            padding-right: 30px;
+            text-align: right;
+            box-sizing: border-box;
+        }
+.footerRight > img{
+	width: 62.05px;
+	height: 26.15px;
+	padding-right: 8px;
+}
+.footerRight > h6 {
+	float: right;
+}
+.footerRight > h6 > .min{
+	font-size: 9px;
+}
+.footerRight > h6 p{
+	font-size: 14px;
+}
+.footerRight > h6:first-child {
+	font-size: 9px;
+}
+.footerRight > p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 8px;
+	font-weight: 300;
+	color: #1F1F1F;
+	text-align:right;
+	padding-top: 8px;
+}
+</style>
+
+</head>
+<body>
+  
+	<header>
+		
+		<nav>
+			<h1 class="logo"><a href="./main.html" id="logoM">PIONAR</a></h1>
+			<ul class="navigation">
+				<li><a href="./profile.html">PROFILE</a></li>
+				<li><a href="./works.html">WORKS</a></li>
+				<li><a href="http://2021.kpudesign.net/index">ARCHIVE</a></li>
+				<li><a href="./about.html">ABOUT</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="main">
+		<a href="#" id = "bio">Contact</a>
+		<img src="https://i.postimg.cc/j5Hyv8SB/0000.png" id ="image">
+		<h1>LEE</h1>
+		<h2>SEO YOON</h2>
+		<p>I'm a mobility designer who constantly tries to break away
+			from something typical. Challenges such as projects with 
+		   new fields always make me excited.</p>
+
+		   <img src="https://i.postimg.cc/4xp3tkgc/flower1-3.png" id="flower">
+		   <div id="draggable" class="ui-widget-content"><img src="https://i.postimg.cc/4xp3tkgc/flower1-3.png" id = "fflow1"></div><img src="https://i.postimg.cc/4xp3tkgc/flower1-3.png" id = "fflow2" ><img src="https://i.postimg.cc/4xp3tkgc/flower1-3.png" id = "fflow3">
+		
+		<h3>Click!</h3>
+		<h4>Drag Flower with your Comments!</h4> <i class="fas fa-times"></i>
+		
+		<div class="text">
+		<a href ="#"><div id="t">Mail</div></a>
+		<a href ="#"><div id="te">Facebook</div></a>
+		<a href ="#"><div id="tex">Instagram</div></a>
+		</div>
+
+		<div id="droppable" class="ui-widget-header"><div class="write"><img src="https://i.postimg.cc/4xp3tkgc/flower1-3.png" id = "fflow4"></div><img src="https://i.postimg.cc/4xp3tkgc/flower1-3.png" id = "fflow5"><img src="https://i.postimg.cc/4xp3tkgc/flower1-3.png" id = "fflow6"><img src="https://i.postimg.cc/4xp3tkgc/flower1-3.png" id = "fflow7">
+		<div class="ff"><img src="https://i.postimg.cc/4xp3tkgc/flower1-3.png" id = "fflow8"><div class="box"></div></div></div>
+		
+	</div>
+
+	<!-- <div class='inp'>
+        <label>이름</label>
+        <input id="input_name" type="text" size="20">
+        <br>
+        <label>부서</label>
+        <input id="input_dept" type="text" size="20">
+
+		<button id="btn_ok">생성</button>
+
+	</div> -->
+
+	<div id="about" class="up-on-scroll">
+		<img src ="https://i.postimg.cc/7ZDJVSBh/1.png" id = "first">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+
+	<div id="about2" class="up-on-scroll">
+		<img src ="https://i.postimg.cc/CLQwNQjm/4-1.png" id = "second">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
+	</div>
+
+	<div id="about3" class="up-on-scroll">
+		<img src ="https://i.postimg.cc/TPNyfFT5/2.png" id = "third">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
+
+		<a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </a>
+	</div>
+
+	<div id="about4" class="up-on-scroll">
+		<img src ="https://i.postimg.cc/Dymn2r6V/5.png" id = "third">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+		
+	</div>
+
+
+
+
+</div>
+<footer>
+    <div class="footerLeft"><p>PIONAR</p></div>
+    <div class="footerCenter"><p>FLOWER THAT BLOOMS IN ADVERSITY<br>IS THE MOST RARE AND BEAUTY OF ALL</p></div>
+    <div class="footerRight">
+      <img src="./imgs/KPU.png" alt="kpu">
+      <h6>
+        <p class="min">기업을 품는 산학융합 선도대학</p>
+        <p>한국산업기술대학교</p>
+      </h6>
+      <p>COPYRIGHT © 2021 KOREA POLYTECHNIC UNIV, ALL RIGHTS RESERVED</p>
+    </div>
+  </footer>
+<script>
+    function isElementUnderBottom(elem, triggerDiff) {
+    const { top } = elem.getBoundingClientRect();
+    const { innerHeight } = window;
+    return top > innerHeight + (triggerDiff || 0);
+  }
+  
+  function handleScroll() {
+    const elems = document.querySelectorAll('.up-on-scroll');
+    elems.forEach(elem => {
+      if (isElementUnderBottom(elem, -20)) {
+        elem.style.opacity = "0";
+        elem.style.transform = 'translateY(150px)';
+      } else {
+        elem.style.opacity = "1";
+        elem.style.transform = 'translateY(0px)';
+      }
+    })
+  }
+  
+  window.addEventListener('scroll', handleScroll);
+
+  $(function(){
+
+	$('.write').hide();
+	$('#fflow1').hide();
+	$('#fflow2').hide();
+	$('#fflow3').hide();
+	$('#fflow4').hide();
+	$('#fflow5').hide();
+	$('#fflow6').hide();
+	$('#fflow7').hide();
+	$('#fflow8').hide();
+	$('.main h4').hide();
+	$('.fa-times').hide();
+
+
+  $('#flower').click(function(){
+
+		
+        // $('#image').css('width','240px');
+		// $('#image').css('top','139px');
+		
+		$('#flower').hide();
+		$('.main h1').css('font-size','72px');
+		
+		$('.main h2').css('font-size','72px');
+	
+		$('#image').animate({'left':60}, 500);
+        
+		$('.main h1').animate({'left':457}, 500);
+		$('.main h1').animate({'top':197}, 500);
+		$('.main h2').animate({'left':457}, 500);
+		
+		
+
+		$('.write').fadeIn(1000);
+		$('.main p').fadeOut();
+		$('#fflow1').fadeIn(1000);
+		$('#fflow2').fadeIn(1000);
+		$('#fflow3').fadeIn(1000);
+		$('#fflow4').fadeIn(1000);
+		$('#fflow5').fadeIn(1000);
+		$('#fflow6').fadeIn(1000);
+		$('#fflow7').fadeIn(1000);
+		$('#fflow8').fadeIn(1000);
+		$('.main h4').fadeIn(1000);
+		
+       
+       
+
+        
+
+
+
+    });
+
+	$('#flower').click(function(){
+
+
+		$('.fa-times').fadeIn();
+
+});
+
+$('.fa-times').click(function(){
+
+
+	$('.fa-times').hide();
+	$('.write').fadeOut(1000);
+		$('.main p').fadeIn();
+		$('#fflow1').fadeOut(500);
+		$('#fflow2').fadeOut(500);
+		$('#fflow3').fadeOut(500);
+		$('#fflow4').fadeOut(500);
+		$('#fflow5').fadeOut(500);
+		$('#fflow6').fadeOut(500);
+		$('#fflow7').fadeOut(500);
+		$('#fflow8').fadeOut(500);
+		$('.main h4').fadeOut(500);
+		$('#image').animate({'left':130}, 500);
+		
+		$('#flower').fadeIn();
+		$('.main h1').css('font-size','133px');
+		
+		$('.main h2').css('font-size','133px');
+
+		$('.main h1').animate({'left':567}, 1000);
+		$('.main h1').animate({'top':145}, 1000);
+		$('.main h2').animate({'left':567}, 1000);
+
+
+
+});
+
+});
+
+
+  
+  </script> 
+  
+  <script>
+	$( function() {
+	  $( "#draggable" ).draggable();
+	  $( "#droppable" ).droppable({
+		drop: function( event, ui ) {
+		  $( this )
+			.addClass( "ui-state-highlight" )
+			.find( "p" )
+			  .html( "Dropped!" );
+		}
+	  });
+	} );
+	</script>
+
+<script>
+	$(function(){
+	   $('#btn_ok').click(function(){
+
+		   let name = $('#input_name').val();
+		   let dept = $('#input_dept').val();
+		   let phone = $('#input_phone').val();
+		   let email = $('#input_email').val();
+		   let home = $('#input_home').val();
+
+		   $('#name').text(name);
+		   $('#dept').text(dept);
+		   $('#phone').text(phone);
+		   $('#email').text(email);
+		   $('#home').text(home);
+
+	   });
+	});
+</script>
+</body>
+</html>

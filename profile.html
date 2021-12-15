@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        *{
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: 'Roboto', sans-serif; */
+            font-family: 'Playfair Display', serif;
+        }
+
+        body{
+            background-color: #0d0d0d;
+        }
+            
+        header{
+            width: 100vw;
+            height: 80px;
+            /* min-height: 30px; */
+            
+            
+        }
+        .logo > a{
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 32px;
+            color: #fff;
+        }
+
+        header nav{
+            position: absolute;
+            top:0;
+            /* margin-left: calc((100vw - 1440px) / 2); */
+            height: 80px;
+            width: 100%;
+            /*	background-color: red;*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+
+            position: fixed;
+            background-color: #0d0d0d;
+        }
+
+        header nav h1{
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            color: white;
+            margin-left: 120px;
+        }
+
+        header nav ul{
+            display: flex;
+            list-style: none;
+            gap: 68px;
+            margin-right: 120px;
+        }
+
+        header nav a{
+            font-size: 16px;
+            letter-spacing: -1px;
+            text-decoration: none;
+            color: #A0A0A0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #body-wrapper{
+            display: flex;
+            height:3700px;
+        }
+        header nav a:hover{
+            color: #fff;
+        }
+
+        .first{
+            color: #fff;
+        }
+
+        .content{
+            /* width: 1280px; */
+            margin: 0px auto;
+            background-color: #0d0d0d;
+        }
+
+        #student{
+            display: inline-block;
+            width: 380px;
+        }
+
+        #student:hover{
+            content: url(image/hahyemi.jpg);
+        }
+
+        #student2{
+            display: inline-block;
+            width: 286px;
+        }
+
+        #student2:hover{
+            content: url(image/hongsujung.jpg);
+        }
+
+        #student3{
+            display: inline-block;
+            width: 290px;
+        }
+
+        #student3:hover{
+            content: url(image/jominki.jpg);
+        }
+
+        #student4{
+            display: inline-block;
+            width: 356px;
+        }
+
+        #student4:hover{
+            content: url(image/leechaeyeon.jpg);
+        }
+
+        #student5{
+            display: inline-block;
+            width: 332px;
+        }
+
+        #student5:hover{
+            content: url(image/kimharim.jpg);
+        }
+
+        #student6{
+            display: inline-block;
+            width: 304px;
+        }
+
+        #student6:hover{
+            content: url(image/leehyeonna.jpg);
+        }
+
+        #student7{
+            display: inline-block;
+            width: 380px;
+        }
+
+        #student7:hover{
+            content: url(image/kimajung.jpg);
+        }
+
+        #student8{
+            display: inline-block;
+            width: 356px;
+        }
+
+        #student8:hover{
+            content: url(image/leehyojung.jpg);
+        }
+
+        #major{
+            display: inline-block;
+            color: #fff;
+            font-weight: 700;
+            font-size: 48px;
+            margin-left: 24px;
+        } 
+
+        #profile1{
+            position: absolute;
+            top: 192px;
+            left: 680px;
+        }
+
+        #profile2{
+            position: absolute;
+            top: 622px;
+            left: 180px;
+        }
+
+        #profile3{
+            position: absolute;
+            top: 876px;
+            left: 880px;
+        }
+
+        #profile4{
+            position: absolute;
+            top: 1288px;
+            left: 480px;
+        }
+
+        #profile5{
+            position: absolute;
+            top: 1840px;
+            left: 200px;
+        }
+
+        #profile6{
+            position: absolute;
+            top: 2190px;
+            left: 800px;
+        }
+
+        #profile7{
+            position: absolute;
+            top: 2554px;
+            left: 260px;
+        }
+
+        #profile8{
+            position: absolute;
+            top: 3126px;
+            left: 720px;
+        }
+
+        .stroke{
+            color: black;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #fff;
+        }
+
+        .up-on-scroll {
+            transition: transform 0.7s, opacity 1s;
+        }
+
+
+        footer{
+            height: 100px;
+            width: 100vw;
+            display: flex;
+        }
+        .footerLeft {
+            width:25%;
+            background-color: #0d0d0d;
+            border-right: 0.8px solid #fff;
+        }
+        .footerLeft > p {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: white;
+            text-align:center;
+            padding-top:35px;
+            border-top: 0.8px solid white;
+        }
+
+        .footerCenter {
+            width: 40%;
+            background-color: #0d0d0d;
+        }
+        .footerCenter > p {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: white;
+            line-height: 138%;
+            letter-spacing: 10%;
+            padding-top: 30px;
+            padding-left: 36px;
+            border-top: 0.8px solid white;
+        }
+        .footerRight {
+            width: 35%;
+            background-color: white;
+            padding-top: 40px;
+            padding-right: 30px;
+            text-align: right;
+            box-sizing: border-box;
+        }
+        .footerRight > img{
+            width: 62.05px;
+            height: 26.15px;
+            padding-right: 8px;
+        }
+        .footerRight > h6 {
+            float: right;
+            font-family: 'Roboto', sans-serif;
+        }
+        .footerRight > h6 > .min{
+            font-size: 9px;
+        }
+        .footerRight > h6 p{
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .footerRight > h6:first-child {
+            font-size: 9px;
+        }
+        .footerRight > p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 8px;
+            font-weight: 300;
+            color: #1F1F1F;
+            text-align:right;
+            padding-top: 8px;
+        }
+        
+
+        /* html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #body-wrapper {
+            min-height: 100%;
+            position: relative;
+        }
+ 
+        #body-content {
+            margin-top: 100px;
+            padding-bottom: 100px; 
+        }
+
+        footer {
+            width: 100%;
+            height: 100px; 
+            position: absolute;  
+            bottom: 0;
+            left: 0;
+        } */
+        
+        </style>
+</head>
+<body>
+
+    <header>
+		
+		<nav>
+			<h1 class="logo"><a href="./main.html" id="logoM">PIONAR</a></h1>
+			<ul class="navigation">
+				<li><a class="first" href="./profile.html">PROFILE</a></li>
+				<li><a class="second" href="./works.html">WORKS</a></li>
+				<li><a class="second" href="http://2021.kpudesign.net/index">ARCHIVE</a></li>
+				<li><a class="second" href="./about.html">ABOUT</a></li>
+			</ul>
+		</nav>
+	</header>
+    <wrap>
+    <div id="body-wrapper">
+        <div class="content" id="body-content">
+            <div id="profile1">
+                <a href="./profile_sub.html"><img id="student" class="up-on-scroll" src="image/hahyemi2.png"></a>
+                <p id="major" class="up-on-scroll"><a class="stroke">INDUSTRIAL</a><br>HA<br>HYEMI</p>
+            </div>
+
+            <div id="profile2">
+                <a href="./profile_sub.html"><img id="student2" class="up-on-scroll" src="image/hongsujung2.png"></a>
+                <p id="major" class="up-on-scroll"><a class="stroke">MEDIA</a><br>HONG<br>SUJUNG</p>
+            </div>
+
+            <div id="profile3">
+                <a href="./profile_sub.html"><img id="student3" class="up-on-scroll" src="image/jominki2.png"></a>
+                <p id="major" class="up-on-scroll"><a class="stroke">MEDIA</a><br>JO<br>MINKI</p>
+            </div>
+
+            <div id="profile4">
+                <a href="./profile_sub.html"><img id="student4" class="up-on-scroll" src="image/leechaeyeon2.png"></a>
+                <p id="major" class="up-on-scroll"><a class="stroke">INDUSTRIAL</a><br>LEE<br>CHAEYEON</p>
+            </div>
+
+            <div id="profile5">
+                <a href="./profile_sub.html"><img id="student5" class="up-on-scroll" src="image/kimharim2.png"></a>
+                <p id="major" class="up-on-scroll"><a class="stroke">MEDIA</a><br>KIM<br>HARIM</p>
+            </div>
+
+            <div id="profile6">
+                <a href="./profile_sub.html"><img id="student6" class="up-on-scroll" src="image/leehyeonna2.png"></a>
+                <p id="major" class="up-on-scroll"><a class="stroke">INDUSTRIAL</a><br>HA<br>HYEMI</p>
+            </div>
+
+            <div id="profile7">
+                <a href="./profile_sub.html"><img id="student7" class="up-on-scroll" src="image/kimajung2.png"></a>
+                <p id="major" class="up-on-scroll"><a class="stroke">MEDIA</a><br>KIM<br>AJUNG</p>
+            </div>
+
+            <div id="profile8">
+                <a href="./profile_sub.html"><img id="student8" class="up-on-scroll" src="image/leehyojung2.png"></a>
+                <p id="major" class="up-on-scroll"><a class="stroke">INDUSTRIAL</a><br>LEE<br>HYOJUNG</p>
+            </div>
+        </div>
+    </div>
+    </wrap>
+
+    <footer>
+        <div class="footerLeft"><p>PIONAR</p></div>
+        <div class="footerCenter"><p>FLOWER THAT BLOOMS IN ADVERSITY<br>IS THE MOST RARE AND BEAUTY OF ALL</p></div>
+        <div class="footerRight">
+        <img src="./imgs/KPU.png" alt="kpu">
+        <h6>
+            <p class="min">기업을 품는 산학융합 선도대학</p>
+            <p>한국산업기술대학교</p>
+        </h6>
+        <p>COPYRIGHT © 2021 KOREA POLYTECHNIC UNIV, ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        function isElementUnderBottom(elem, triggerDiff) {
+        const { top } = elem.getBoundingClientRect();
+        const { innerHeight } = window;
+        return top > innerHeight + (triggerDiff || 0);
+      }
+      
+      function handleScroll() {
+        const elems = document.querySelectorAll('.up-on-scroll');
+        elems.forEach(elem => {
+          if (isElementUnderBottom(elem, -20)) {
+            elem.style.opacity = "0";
+            elem.style.transform = 'translateY(70px)';
+          } else {
+            elem.style.opacity = "1";
+            elem.style.transform = 'translateY(0px)';
+          }
+        })
+      }
+      
+      window.addEventListener('scroll', handleScroll);
+      </script> 
+</body>
+</html>

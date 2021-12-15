@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+*{
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+header{
+	width: 100vw;
+	height: 80px;
+	/* min-height: 30px; */
+}
+.logo > a{
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 32px;
+            color: #fff;
+        }
+
+header nav{
+position: absolute;
+top:0;
+/* margin-left: calc((100vw - 1440px) / 2); */
+height: 80px;
+width: 100%;
+/*	background-color: red;*/
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 7;
+position: fixed;
+background-color: #0d0d0d;
+}
+header nav h1{
+font-size: 18px;
+font-weight: bold;
+letter-spacing: -1px;
+color: #fff;
+margin-left: 120px;
+}
+header nav ul{
+display: flex;
+list-style: none;
+gap: 68px;
+margin-right: 120px;
+}
+header nav a{
+font-size: 16px;
+letter-spacing: -1px;
+text-decoration: none;
+color: rgb(161, 161, 161);
+font-weight: 400;
+}
+#present{
+    color: #fff;
+}
+.navigation li:hover a{
+    color: #fff;
+}
+/* ------------------------------------------------------------------------------------ */
+.about_main {
+    height: 811px;
+	background-color: #0d0d0d;
+}
+#about_main_img1 { 
+    width: 1100px;
+    height: 700px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+	z-index: 12;
+	
+}
+#about_main_img2 { 
+    width: 1100px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+	z-index: 1;
+	opacity:0.4;
+}
+
+.about-container {
+    height: 720px;
+    background-color: #FFDD64;
+}
+.centerheadcon{
+    width: 100%;
+	height : 200px;
+	background-color: #FFDD64;
+	font-family: 'Viaoda Libre', cursive;
+
+    flex-flow:row wrap;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+.centerhead1 {
+    color:#000;
+    margin-left: 10%;
+    margin-top:50px;
+    font-size:40px;
+}
+.centerhead2 {
+    color:#000;
+    margin-right: 10%;
+    font-size:16px;
+    margin-top:50px;
+}
+.identity1 {
+    list-style: none;
+
+}
+.identity1 > li {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1086px;
+}
+.identity1 > li p{
+	font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 50px;
+	margin-bottom:10px;
+	line-height: 200%;
+	color: #000;
+	/* width: 480px; */
+}
+.identity2 {
+    list-style: none;
+}
+.identity2 > li {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1086px;
+}
+.identity2 > li p{
+	font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 50px;
+	line-height: 200%;
+	margin-bottom:10px;
+	color:#fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	/* width: 480px; */
+}
+.about-container2{
+	height: 400px;
+	background-color: #0d0d0d;
+}
+.identity3 {
+    list-style: none;
+    margin-top: 112px;
+}
+.identity3 > li {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1086px;
+}
+.identity3 > li p{
+	font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 50px;
+	line-height: 200%;
+	margin-bottom:20px;
+	color:#fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	margin-top: 70px;
+	margin-left:5%
+	/* width: 480px; */
+}
+.identity3 > li > img {
+    width: 550px;
+    height: 800px;
+	position:absolute;
+	margin-left:50%
+}
+.up-on-scroll {
+    transition: transform 0.7s, opacity 1s;
+}
+/* ------------------------------------------------------------------------------------ */
+.newsbox{
+	height:400px;
+	background-color: #000;
+	
+}
+.newsbox-head{
+	height:100px;
+	z-index: 2;
+}
+.newsbox-head h2{
+   padding-top:30px;
+   padding-left:170px;
+   color:#fff;
+}
+.Line1{
+    width: 1129px;  
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Line1 > .news-box > img{
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 18px;
+}
+.news-name p{
+	color:#fff;
+	font-size:15px;
+}
+.news-box {
+    position: relative;
+}
+.news-box:hover img{
+    filter: brightness(60%);
+}
+/* ------------------------------------------------------------------------------------ */
+footer{
+	height: 100px;
+	width: 100vw;
+	display: flex;
+}
+.footerLeft {
+	width:25%;
+	background-color: #0d0d0d;
+	border-right: 0.8px solid #fff;
+}
+.footerLeft > p {
+	font-family: 'Playfair Display', serif;
+	font-size: 24px;
+	font-weight: 400;
+	color: white;
+	text-align:center;
+	padding-top:35px;
+	border-top: 0.8px solid white;
+}
+
+.footerCenter {
+	width: 40%;
+	background-color: #0d0d0d;
+}
+.footerCenter > p {
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: white;
+	line-height: 138%;
+	letter-spacing: 10%;
+	padding-top: 30px;
+	padding-left: 36px;
+	border-top: 0.8px solid white;
+}
+.footerRight {
+	width: 35%;
+	background-color: white;
+	margin-top: 40px;
+	margin-right: 30px;
+	text-align: right;
+}
+.footerRight > img{
+	width: 62px;
+	height: 26px;
+	padding-right: 8px;
+}
+.footerRight > h6 {
+	float: right;
+}
+.footerRight > h6 > .min{
+	font-size: 9px;
+}
+.footerRight > h6 p{
+	font-size: 14px;
+}
+.footerRight > h6:first-child {
+	font-size: 9px;
+}
+.footerRight > p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 8px;
+	font-weight: 300;
+	color: #1F1F1F;
+	text-align:right;
+	padding-top: 8px;
+}
+  #box{
+    background-color: #FFDD64;
+  }
+
+    </style>
+</head>
+<body>
+  <header>		
+		<nav>
+			<h1 class="logo"> <a href="./main.html">PIONAR</a></h1>
+			<ul class="navigation">
+				<li><a href="./profile.html">PROFILE</a></li>
+				<li><a href="./works.html">WORKS</a></li>
+				<li><a href="http://2021.kpudesign.net/index">ARCHIVE</a></li>
+				<li><a href="./about.html">ABOUT</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+  <wrap>
+    <div id="box">
+      <div class="about_main">
+        <img src="./img/logore.png" alt="flower_main" id="about_main_img1">
+        <img src="./img/flower1.png" alt="flower_main" id="about_main_img2">
+        <!-- <p><U>The 2022 graduation exhibition site</U></p> -->
+      </div>
+
+
+      <div class="about-container">
+        <!-- <div class="about-subtitle"><h4>Pionar :</h4></div> -->
+        <div class="centerheadcon">
+          <div class="centerhead1">
+              <p>Pionar : </p>
+          </div>
+
+          <div class="centerhead2">
+              <p>2022 KOREAN <br> POLYTECHNIC <br> UNIVERSITY <br> DESIGN ENGINEERING <br> GRAD SHOW</p>
+          </div>
+        </div>
+        
+        <ul class="identity1">
+          <li><p class="up-on-scroll">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLOWER THAT </p></li>
+          <li><p class="up-on-scroll">BLOOMS IN </p></li>
+          <li><p class="up-on-scroll">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADVERSITY </p></li>
+        </ul>
+        <ul class="identity2">
+          <li><p class="up-on-scroll">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IS THE MOST RARE </p></li>
+          <li><p class="up-on-scroll">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND BEAUTY OF ALL </p></li>
+        </ul>
+      </div>
+
+
+
+
+      <div class="about-container2">
+        <ul class="identity3">
+          <li><p class="up-on-scroll">IT'S THE SAME FOR YOU TOO </p><img src="./img/flower2.png" class="up-on-scroll" alt="flower3"></li>
+        </ul>
+      </div>
+
+      <div class="newsbox">
+        <div class="newsbox-head">  
+          <h2>NEWS</h2>
+        </div>
+
+        <div class="students-img">
+          <div class="Line1">
+            <div class="news-box">
+              <img src="./img/02.png">
+              <div class="news-name">
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div class="news-box">
+              <img src="./img/about_img.png">
+              <div class="news-name">
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div class="news-box">
+              <img src="./img/img3.png">
+              <div class="news-name">
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      
+
+    </div> 
+  </wrap> 
+
+
+  <footer>
+    <div class="footerLeft"><p>PIONAR</p></div>
+    <div class="footerCenter"><p>FLOWER THAT BLOOMS IN ADVERSITY<br>IS THE MOST RARE AND BEAUTY OF ALL</p></div>
+    <div class="footerRight">
+      <img src="./img/KPU.png" alt="kpu">
+      <h6>
+        <p class="min">기업을 품는 산학융합 선도대학</p>
+        <p>한국산업기술대학교</p>
+      </h6>
+      <p>COPYRIGHT © 2021 KOREA POLYTECHNIC UNIV, ALL RIGHTS RESERVED</p>
+    </div>
+  </footer>
+  <script>
+    function isElementUnderBottom(elem, triggerDiff) {
+    const { top } = elem.getBoundingClientRect();
+    const { innerHeight } = window;
+    return top > innerHeight + (triggerDiff || 0);
+  }
+  
+  function handleScroll() {
+    const elems = document.querySelectorAll('.up-on-scroll');
+    elems.forEach(elem => {
+      if (isElementUnderBottom(elem, -20)) {
+        elem.style.opacity = "0";
+        elem.style.transform = 'translateY(70px)';
+      } else {
+        elem.style.opacity = "1";
+        elem.style.transform = 'translateY(0px)';
+      }
+    })
+  }
+  
+  window.addEventListener('scroll', handleScroll);
+
+
+
+
+
+
+
+
+
+
+
+  
+  </script>   
+</body>
+</html>
